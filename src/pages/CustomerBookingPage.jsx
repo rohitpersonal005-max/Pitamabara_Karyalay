@@ -48,8 +48,8 @@ const TRANSLATIONS = {
     selectPurpose: "Select a purpose...",
     kundaliType: "Type of Kundali Booking",
     vivahType: "Type of Vivah Pooja",
-    clientAddress: "Client Address",
-    addressPlaceholder: "Please enter your full address for Vastu Shastra consultation...",
+    clientAddress: "Location / Address",
+    addressPlaceholder: "Please enter the full address/location for the Pooja or consultation...",
     chooseDate: "Choose a Date",
     panditName: "Karmyogi Pandit Priyashankar Pandey",
     language: "English"
@@ -99,8 +99,8 @@ const TRANSLATIONS = {
     selectPurpose: "एक उद्देश्य चुनें...",
     kundaliType: "कुंडली बुकिंग का प्रकार",
     vivahType: "विवाह पूजा का प्रकार",
-    clientAddress: "क्लाइंट का पता",
-    addressPlaceholder: "कृपया वास्तु शास्त्र परामर्श के लिए अपना पूरा पता दर्ज करें...",
+    clientAddress: "स्थान / पता",
+    addressPlaceholder: "कृपया पूजा या परामर्श के लिए पूरा पता दर्ज करें...",
     chooseDate: "दिनांक चुनें",
     panditName: "कर्मयोगी पंडित प्रियशंकर पांडेय",
     language: "हिंदी"
@@ -122,7 +122,10 @@ const POOJA_TYPES = [
   'Suryanarayan Yagya',
   'Navachandi Shatchandi Sahastrchandi',
   'Murti Pran Pratishtha',
-  'Vivah Sakharpooda Munj Navagrah Jap',
+  'Vivah',
+  'Sakharpooda',
+  'Munj',
+  'Navagrah Jap',
   'Parthiv Ganesh Sthapana',
 ];
 
@@ -184,7 +187,10 @@ const POOJA_TRANSLATIONS = {
   'Suryanarayan Yagya': 'सूर्यनारायण यज्ञ',
   'Navachandi Shatchandi Sahastrchandi': 'नवचंडी शतचंडी सहस्त्रचंडी',
   'Murti Pran Pratishtha': 'मूर्ति प्राण प्रतिष्ठा',
-  'Vivah Sakharpooda Munj Navagrah Jap': 'विवाह साखरपुडा मुंज नवग्रह जाप',
+  'Vivah': 'विवाह',
+  'Sakharpooda': 'साखरपुडा',
+  'Munj': 'मुंज',
+  'Navagrah Jap': 'नवग्रह जाप',
   'Parthiv Ganesh Sthapana': 'पार्थिव गणेश स्थापना',
 };
 
@@ -378,12 +384,14 @@ const CustomerBookingPage = () => {
       if (formData.purpose === 'Pooja Booking') {
         if (formData.poojaType) finalPurpose += ` - ${formData.poojaType}`;
         if (formData.samagriPreference) finalPurpose += ` (${formData.samagriPreference})`;
+        if (formData.clientAddress) finalPurpose += ` - Address: ${formData.clientAddress}`;
       } else if (formData.purpose === 'kundali booking') {
         if (formData.kundaliType) finalPurpose += ` - ${formData.kundaliType}`;
       } else if (formData.purpose === 'Vastu Shastra') {
         if (formData.clientAddress) finalPurpose += ` - Address: ${formData.clientAddress}`;
       } else if (formData.purpose === 'Vivah Pooja booking') {
         if (formData.vivahType) finalPurpose += ` - ${formData.vivahType}`;
+        if (formData.clientAddress) finalPurpose += ` - Address: ${formData.clientAddress}`;
       }
 
       await publicAPI.bookAppointment({
@@ -909,7 +917,7 @@ const CustomerBookingPage = () => {
                     </div>
                   )}
 
-                  {formData.purpose === "Vastu Shastra" && (
+                  {(formData.purpose === "Vastu Shastra" || formData.purpose === "Pooja Booking" || formData.purpose === "Vivah Pooja booking") && (
                     <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
                       <label className="flex items-center text-sm font-semibold text-slate-700">
                         <MapPin className="w-4 h-4 mr-2 text-slate-400" /> {t("clientAddress")}
