@@ -144,23 +144,22 @@ const KUNDALI_TYPES = [
   'Property & Vehicle',
   'General Life Guidance',
   'Annual Horoscope',
+  'Marriage Muhurat',
+  'Manglik Dosha Analysis',
+  'Marriage Delay Remedies',
+  'Love Marriage Consultation',
+  'Wedding Ceremony Guidance',
   'Other'
 ];
 
 const VIVAH_TYPES = [
-  'Gun Milan / Kundali Matching',
-  'Marriage Muhurat',
-  'Manglik Dosha Analysis',
-  'Marriage Delay Remedies',
   'Vivah Badha Nivaran Puja',
-  'Love Marriage Consultation',
   'Graha Shanti Puja',
   'Navagraha Shanti Puja',
   'Kaal Sarp Dosha Nivaran',
   'Pitra Dosha Nivaran',
   'Shiva-Parvati Vivah Puja',
   'Katyayani Puja',
-  'Wedding Ceremony Guidance',
   'Post-Marriage Harmony Puja',
   'Other Marriage Related Service'
 ];
@@ -209,23 +208,22 @@ const KUNDALI_TRANSLATIONS = {
   'Property & Vehicle': 'संपत्ति और वाहन',
   'General Life Guidance': 'सामान्य जीवन मार्गदर्शन',
   'Annual Horoscope': 'वार्षिक राशिफल',
+  'Marriage Muhurat': 'विवाह मुहूर्त',
+  'Manglik Dosha Analysis': 'मांगलिक दोष विश्लेषण',
+  'Marriage Delay Remedies': 'विवाह में देरी के उपाय',
+  'Love Marriage Consultation': 'प्रेम विवाह परामर्श',
+  'Wedding Ceremony Guidance': 'विवाह समारोह मार्गदर्शन',
   'Other': 'अन्य',
 };
 
 const VIVAH_TRANSLATIONS = {
-  'Gun Milan / Kundali Matching': 'गुण मिलान / कुंडली मिलान',
-  'Marriage Muhurat': 'विवाह मुहूर्त',
-  'Manglik Dosha Analysis': 'मांगलिक दोष विश्लेषण',
-  'Marriage Delay Remedies': 'विवाह में देरी के उपाय',
   'Vivah Badha Nivaran Puja': 'विवाह बाधा निवारण पूजा',
-  'Love Marriage Consultation': 'प्रेम विवाह परामर्श',
   'Graha Shanti Puja': 'ग्रह शांति पूजा',
   'Navagraha Shanti Puja': 'नवग्रह शांति पूजा',
   'Kaal Sarp Dosha Nivaran': 'काल सर्प दोष निवारण',
   'Pitra Dosha Nivaran': 'पितृ दोष निवारण',
   'Shiva-Parvati Vivah Puja': 'शिव-पार्वती विवाह पूजा',
   'Katyayani Puja': 'कात्यायनी पूजा',
-  'Wedding Ceremony Guidance': 'विवाह समारोह मार्गदर्शन',
   'Post-Marriage Harmony Puja': 'विवाह पश्चात सामंजस्य पूजा',
   'Other Marriage Related Service': 'अन्य विवाह संबंधी सेवा',
 };
