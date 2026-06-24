@@ -452,7 +452,7 @@ const CustomerBookingPage = () => {
             </div>
 
             {/* Success Card */}
-            <div className="bg-slate-900/60 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] shadow-[0_0_80px_-15px_rgba(249,115,22,0.15)] p-8 sm:p-10 max-w-md w-full text-center relative z-10 transform transition-all hover:scale-[1.01] duration-500">
+            <div className="bg-slate-900/60 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] shadow-[0_0_80px_-15px_rgba(249,115,22,0.15)] p-8 sm:p-10 max-w-xl w-full text-center relative z-10 transform transition-all hover:scale-[1.01] duration-500">
                 {/* Saffron Glowing Border accents */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
@@ -467,7 +467,7 @@ const CustomerBookingPage = () => {
 
                 {/* Use h3 tag with inline styles to override stylesheet h2 color rules */}
                 <h3 
-                  className="text-3xl sm:text-4xl font-extrabold tracking-wide font-serif italic mb-2 select-text"
+                  className="text-2xl sm:text-3xl font-extrabold tracking-wide font-serif mb-6 select-text"
                   style={{
                     color: 'transparent',
                     WebkitBackgroundClip: 'text',
@@ -476,12 +476,8 @@ const CustomerBookingPage = () => {
                     textShadow: '0 2px 10px rgba(251, 191, 36, 0.15)'
                   }}
                 >
-                  Destiny Unlocked!
+                  Your booking has been successfully confirmed.
                 </h3>
-                
-                <p className="text-orange-200/60 text-sm font-medium tracking-wide uppercase mt-1 mb-6">
-                  Session Booked Successfully
-                </p>
 
                 {/* Glassmorphic Ticket Capsule */}
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-8 text-left relative overflow-hidden">
@@ -512,9 +508,21 @@ const CustomerBookingPage = () => {
                   </div>
                 </div>
 
-                <p className="text-slate-300/80 mb-8 text-sm leading-relaxed max-w-sm mx-auto">
-                  You will receive a confirmation email containing further instructions and link to join the virtual guidance session shortly.
-                </p>
+                <div className="text-slate-300/90 text-sm leading-relaxed text-left space-y-4 mb-8">
+                  <p>
+                    We sincerely thank you for placing your trust in us. It is our privilege to support you on your spiritual journey and help you find guidance through the wisdom of astrology.
+                  </p>
+                  <p>
+                    May the blessings of the Divine bring peace, prosperity, and happiness to you and your family. We look forward to serving you and providing thoughtful insights during your consultation.
+                  </p>
+                  <p className="font-medium text-amber-200/95">
+                    Thank you for choosing Shri Pitambara Jyotish Karyalaya.
+                  </p>
+                  <div className="pt-4 border-t border-white/5 text-right font-serif italic text-amber-400">
+                    <p className="text-xs text-orange-200/50">With respect and blessings,</p>
+                    <p className="font-bold text-sm">Shri Pitambara Jyotish Karyalaya</p>
+                  </div>
+                </div>
 
                 <button 
                   onClick={() => window.location.reload()} 
