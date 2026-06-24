@@ -592,7 +592,7 @@ const CustomerBookingPage = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-sm leading-normal py-2">
+            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-sm leading-normal py-2 sm:whitespace-nowrap">
               <span className="inline-block px-3 py-2 italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-orange-600 to-amber-500 mr-3">{t("shriPitambara")}</span>
               <span className="inline-block px-3 py-2 italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-500">{t("jyotishKaryalaya")}</span>
             </h1>
